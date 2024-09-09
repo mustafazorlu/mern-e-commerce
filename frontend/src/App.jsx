@@ -4,11 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Policy from "./components/Policy/Policy";
-import Slider from "./components/Slider/Slider";
-import Categories from "./components/Categories/Categories";
-import Products from "./components/Products/Products";
-import Campaigns from "./components/Campaigns/Campaigns";
+import Homepage from "./pages/Homepage/Homepage";
+import Shoppage from "./pages/Shoppage/ShopPage";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -16,11 +13,8 @@ function App() {
     return (
         <>
             <Header />
-            <Slider />
-            <Categories />
-            <Products />
-            <Campaigns />
-            <Policy />
+            <Homepage />
+            <Shoppage />
             <Footer />
         </>
     );

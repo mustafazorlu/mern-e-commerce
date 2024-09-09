@@ -1,8 +1,22 @@
 import React from "react";
-import "./campaigns.css";
+import "./campaign.css";
+import CampaignItem from "./CampaignItem";
 
 const Campaigns = () => {
-    return <div>Campaigns</div>;
+    return (
+        <section className="campaigns">
+            <div className="container">
+                <div className="campaigns-wrapper">
+                    <CampaignItem />
+                    <CampaignItem />
+                </div>
+                <div className="campaigns-wrapper">
+                    <CampaignItem />
+                    <CampaignItem />
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Campaigns;

@@ -11,21 +11,21 @@ import Authpage from "./pages/Authpage/Authpage";
 import Cartpage from "./pages/Cartpage/Cartpage";
 import Blogpage from "./pages/Blogpage/Blogpage";
 import BlogDetailspage from "./pages/Blogdetailspage/Blogdetailspage";
+import ProductDetailsPage from "./pages/Productdetailspage/Productdetailspage";
 
 function App() {
     const [count, setCount] = useState(0);
 
     return (
         <>
-            <Header />
             {/* <Homepage /> */}
             {/* <Shoppage /> */}
             {/* <Contactpage /> */}
             {/* <Authpage /> */}
             {/* <Cartpage /> */}
             {/* <Blogpage /> */}
-            <BlogDetailspage />
-            <Footer />
+            {/* <BlogDetailspage /> */}
+            <ProductDetailsPage />
         </>
     );
 }

@@ -18,14 +18,14 @@ function App() {
 
     return (
         <>
-            {/* <Homepage /> */}
+            <Homepage />
             {/* <Shoppage /> */}
             {/* <Contactpage /> */}
             {/* <Authpage /> */}
             {/* <Cartpage /> */}
             {/* <Blogpage /> */}
             {/* <BlogDetailspage /> */}
-            <ProductDetailsPage />
+            {/* <ProductDetailsPage /> */}
         </>
     );
 }

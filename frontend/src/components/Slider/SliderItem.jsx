@@ -1,11 +1,11 @@
 import React from "react";
 
-const SliderItem = () => {
+const SliderItem = ({imageSrc}) => {
     return (
         <div className="slider-item fade">
             <div className="slider-image">
                 <img
-                    src="img/slider/slider1.jpg"
+                    src={imageSrc}
                     className="img-fluid"
                     alt=""
                 />

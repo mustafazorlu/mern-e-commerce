@@ -1,60 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./slider.css";
 import SliderItem from "./SliderItem";
 
 const Slider = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+    };
+    const prevSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
+    };
     return (
         <section className="slider">
             <div className="slider-elements">
-                <SliderItem />
-                {/* <div className="slider-item fade">
-                    <div className="slider-image">
-                        <img
-                            src="img/slider/slider2.jpg"
-                            className="img-fluid"
-                            alt=""
-                        />
-                    </div>
-                    <div className="container">
-                        <p className="slider-title">SUMMER 2022</p>
-                        <h2 className="slider-heading">Save up to 70%</h2>
-                        <a href="#" className="btn btn-lg btn-primary">
-                            Explore Now
-                        </a>
-                    </div>
-                </div>
-                <div className="slider-item fade">
-                    <div className="slider-image">
-                        <img
-                            src="img/slider/slider3.jpg"
-                            className="img-fluid"
-                            alt=""
-                        />
-                    </div>
-                    <div className="container">
-                        <p className="slider-title">SUMMER 2022</p>
-                        <h2 className="slider-heading">Save up to 70%</h2>
-                        <a href="#" className="btn btn-lg btn-primary">
-                            Explore Now
-                        </a>
-                    </div>
-                </div> */}
+                {currentSlide === 0 && (
+                    <SliderItem imageSrc={"img/slider/slider1.jpg"} />
+                )}
+                {currentSlide === 1 && (
+                    <SliderItem imageSrc={"img/slider/slider2.jpg"} />
+                )}
+                {currentSlide === 2 && (
+                    <SliderItem imageSrc={"img/slider/slider3.jpg"} />
+                )}
                 <div className="slider-buttons">
-                    <button>
+                    <button onClick={prevSlide}>
                         <i className="bi bi-chevron-left"></i>
                     </button>
-                    <button>
+                    <button onClick={nextSlide}>
                         <i className="bi bi-chevron-right"></i>
                     </button>
                 </div>
                 <div className="slider-dots">
-                    <button className="slider-dot active">
+                    <button
+                        className={`slider-dot ${
+                            currentSlide === 0 ? "active" : ""
+                        }`}
+                        onClick={() => setCurrentSlide(0)}
+                    >
                         <span></span>
                     </button>
-                    <button className="slider-dot">
+                    <button
+                        className={`slider-dot ${
+                            currentSlide === 1 ? "active" : ""
+                        }`}
+                        onClick={() => setCurrentSlide(1)}
+                    >
                         <span></span>
                     </button>
-                    <button className="slider-dot">
+                    <button
+                        className={`slider-dot ${
+                            currentSlide === 2 ? "active" : ""
+                        }`}
+                        onClick={() => setCurrentSlide(2)}
+                    >
                         <span></span>
                     </button>
                 </div>

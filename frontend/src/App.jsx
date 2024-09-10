@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
 import Shoppage from "./pages/Shoppage/ShopPage";
+import Contactpage from "./pages/Contactpage/Contactpage";
+import Authpage from "./pages/Authpage/Authpage";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -13,8 +15,10 @@ function App() {
     return (
         <>
             <Header />
-            <Homepage />
-            <Shoppage />
+            {/* <Homepage /> */}
+            {/* <Shoppage /> */}
+            {/* <Contactpage /> */}
+            <Authpage />
             <Footer />
         </>
     );

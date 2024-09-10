@@ -9,6 +9,8 @@ import Shoppage from "./pages/Shoppage/ShopPage";
 import Contactpage from "./pages/Contactpage/Contactpage";
 import Authpage from "./pages/Authpage/Authpage";
 import Cartpage from "./pages/Cartpage/Cartpage";
+import Blogpage from "./pages/Blogpage/Blogpage";
+import BlogDetailspage from "./pages/Blogdetailspage/Blogdetailspage";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -20,7 +22,9 @@ function App() {
             {/* <Shoppage /> */}
             {/* <Contactpage /> */}
             {/* <Authpage /> */}
-            <Cartpage />
+            {/* <Cartpage /> */}
+            {/* <Blogpage /> */}
+            <BlogDetailspage />
             <Footer />
         </>
     );

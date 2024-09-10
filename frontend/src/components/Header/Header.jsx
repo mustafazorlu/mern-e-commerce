@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-const Header = () => {
+const Header = ({ setIsSearchShow }) => {
     return (
         <header>
             <div className="global-notification">
@@ -264,7 +264,10 @@ const Header = () => {
                                 >
                                     <i className="bi bi-person"></i>
                                 </a>
-                                <button className="search-button">
+                                <button
+                                    className="search-button "
+                                    onClick={() => setIsSearchShow(true)}
+                                >
                                     <i className="bi bi-search"></i>
                                 </button>
                                 <a href="#">
